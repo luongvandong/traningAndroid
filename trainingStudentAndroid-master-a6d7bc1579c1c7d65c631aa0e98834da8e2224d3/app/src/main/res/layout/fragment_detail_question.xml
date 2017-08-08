@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_above="@+id/btnPostAnswer"
+      android:orientation="vertical"
+      android:paddingLeft="8dp"
+      android:paddingRight="8dp"
+      android:paddingTop="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+      <LinearLayout
+          android:id="@id/linear"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+
+        <com.android.project1.view.ui.widget.CircleImageView
+            android:id="@+id/ivUser"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@mipmap/ic_launcher"/>
+
+        <TextView
+            android:id="@+id/tvUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="8dp"
+            android:text="Cuongnv219"/>
+      </LinearLayout>
+
+      <TextView
+          android:id="@+id/tvContent"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/linear"
+          android:layout_marginTop="5dp"
+          android:background="@drawable/bg_edit_text"
+          android:gravity="top|start"
+          android:lines="3"
+          android:padding="5dp"
+          android:text="Day la noi dung cau hoi so 1"/>
+
+      <ImageView
+          android:id="@+id/ivQuestion"
+          android:layout_width="100dp"
+          android:layout_height="100dp"
+          android:layout_below="@+id/tvContent"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="8dp"
+          android:scaleType="centerInside"
+          android:src="@mipmap/ic_launcher"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chưa có câu trả lời nào"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/linearListAnswer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical">
+
+      <TextView
+          android:id="@+id/tvAnswer"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Danh sách câu trả lời:"/>
+
+      <android.support.v7.widget.RecyclerView
+          android:id="@+id/rcvAnswer"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:paddingLeft="8dp"
+          android:paddingRight="8dp"
+          android:paddingTop="8dp"/>
+    </LinearLayout>
+  </LinearLayout>
+
+  <Button
+      android:id="@+id/btnPostAnswer"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:background="#FF6CD470"
+      android:text="Post Answer"
+      android:textColor="@android:color/white"/>
+</RelativeLayout>

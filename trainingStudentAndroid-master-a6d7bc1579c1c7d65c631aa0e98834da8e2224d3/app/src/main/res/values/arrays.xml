@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <integer-array name="account_images">
+    <item>@drawable/ic_message_black_24dp</item>
+    <item>@drawable/ic_message_black_24dp</item>
+  </integer-array>
+</resources>

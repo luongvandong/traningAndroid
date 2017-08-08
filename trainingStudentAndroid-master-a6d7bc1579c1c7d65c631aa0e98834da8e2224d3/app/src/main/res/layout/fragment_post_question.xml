@@ -1,0 +1,89 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp"
+            tools:context="com.android.project1.view.ui.fragment.PostQuestionFragment">
+
+  <RelativeLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Title"/>
+
+    <EditText
+        android:id="@+id/edtTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTitle"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="5dp"
+        android:layout_toLeftOf="@+id/imgBtnCamera"
+        android:layout_toStartOf="@+id/imgBtnCamera"
+        android:background="@drawable/bg"
+        android:gravity="start"
+        android:inputType="textCapSentences"
+        android:lines="1"
+        android:maxLines="1"
+        android:padding="8dp"/>
+
+    <requestFocus/>
+
+    <TextView
+        android:id="@+id/tvContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtTitle"
+        android:layout_marginTop="10dp"
+        android:text="Content"/>
+
+    <EditText
+        android:id="@+id/edtContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvContent"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bg"
+        android:gravity="top|start"
+        android:inputType="textMultiLine"
+        android:lines="4"
+        android:maxLines="4"
+        android:padding="8dp"/>
+
+    <ImageButton
+        android:id="@+id/imgBtnCamera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tvTitle"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/ic_camera"/>
+
+    <ImageView
+        android:id="@+id/ivCamera"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/edtContent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher"/>
+
+    <Button
+        android:id="@+id/btnPost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivCamera"
+        android:layout_marginTop="16dp"
+        android:background="#FF6CD470"
+        android:text="Post"
+        android:textColor="@android:color/white"/>
+  </RelativeLayout>
+</ScrollView>
